@@ -1,6 +1,5 @@
-package be.intecbrussel.SpringDemo.service;
+package be.intecbrussel.springdemo.service;
 
 public interface Oven {
-
     void bakePizza();
 }

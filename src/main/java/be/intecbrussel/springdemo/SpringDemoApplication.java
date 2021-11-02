@@ -1,4 +1,4 @@
-package be.intecbrussel.SpringDemo;
+package be.intecbrussel.springdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
