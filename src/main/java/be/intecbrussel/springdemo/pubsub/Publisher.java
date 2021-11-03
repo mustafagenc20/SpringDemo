@@ -8,13 +8,16 @@ import javax.annotation.PostConstruct;
 
 @Component
 public class Publisher {
-    @Autowired
     public ApplicationEventPublisher eventPublisher;
 
-    // LifeCycle van een bean
+    public Publisher(ApplicationEventPublisher publisher){
+        System.out.println("Publisher created");
+        this.eventPublisher = publisher;
+    }
 
-    @PostConstruct
+    // LifeCycle van een bean
     public void sendEvent(){
-        eventPublisher.publishEvent("Publisher created... Hello from the publisher");
+        System.out.println("Sending event");
+        eventPublisher.publishEvent(new DataEvent("Publisher created... Hello from the publisher..."));
     }
 }
